@@ -1,0 +1,10 @@
+<mat-toolbar class="toolbar"> 
+    <span>Demo</span>
+    <span class="example-spacer"></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span> Benvenuto! </span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button *ngIf="showHome" class="material-icons" (click)="mostraHome()">home</button>
+    <button *ngIf="!showHome" class="material-icons" (click)="mostraCarrello()">shopping_cart</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</mat-toolbar>

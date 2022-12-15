@@ -1,0 +1,31 @@
+<div class="container page-wrapper">
+    <h2>Carrello</h2>
+    <div class="page-inner" *ngFor="let prodotto of prodotti">
+        <div class="el-wrapper">
+            <div class="box-up">
+                <img class="img" src="" alt="">
+                <div class="img-info">
+                    <div class="info-inner">
+                        <span class="p-name">{{prodotto.nome}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-down">
+                <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                </div>
+                <button mat-icon-button class = "cart" (click)="rimuovi(prodotto, false)">
+                    <span class="price">{{prodotto.prezzo}}€</span>  
+                    <span class="add-to-cart">
+                        <span class="txt">Rimuovi</span>
+                    </span>
+                </button>
+            </div>
+            <button mat-raised-button (click)="remQta(prodotto)">-</button>
+            <button mat-raised-button (click)="addQta(prodotto)">+</button>
+            QTA: {{qta[prodotti.indexOf(prodotto)][1]}}
+        </div>
+    </div>
+</div>
+<h3>Totale: {{totale.toFixed(2)}}</h3>
+<button mat-raised-button color="#3f96cd" (click)="acquista()">Acquista</button>

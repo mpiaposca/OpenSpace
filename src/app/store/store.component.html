@@ -1,0 +1,93 @@
+<body>
+
+    <div class="container page-wrapper">
+      <div class="page-inner" *ngFor="let prodotto of prodottiR1">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{prodotto.nome}}</span>
+                  </div>
+                </div>
+              </div>
+   
+             <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+                <button mat-icon-button class = "cart" (click)="addToCart(prodotto)">
+                  <span class="price">{{prodotto.prezzo}}€</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Aggiungi al carrello</span>
+                  </span>
+                </button>
+              </div>
+        </div>
+      </div>
+    </div>
+   
+  
+   <div class="container page-wrapper">
+      <div class="page-inner" *ngFor="let prodotto of prodottiR2">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{prodotto.nome}}</span>
+                  </div>
+                </div>
+              </div>
+   
+             <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+                <button mat-icon-button class = "cart" (click)="addToCart(prodotto)">
+                  <span class="price">{{prodotto.prezzo}}€</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Aggiungi al carrello</span>
+                  </span>
+                </button>
+              </div>
+        </div>
+      </div>
+    </div>
+   
+  
+  
+   <div class="container page-wrapper">
+      <div class="page-inner" *ngFor="let prodotto of prodottiR3">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{prodotto.nome}}</span>
+                  </div>
+                </div>
+              </div>
+   
+             <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+                <button mat-icon-button class = "cart" (click)="addToCart(prodotto)">
+                  <span class="price">{{prodotto.prezzo}}€</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Aggiungi al carrello</span>
+                  </span>
+                </button>
+              </div>
+        </div>
+      </div>
+    </div>
+  
+    <div style="text-align: center;">
+      <h3>Pagina {{pageN+1}}</h3>
+      <button mat-raised-button style="width: 50%; height: 50px;" (click)="prevPage()">Precedente</button>
+      <button mat-raised-button style="width: 50%; height: 50px;" (click)="nextPage()">Successiva</button>
+    </div>
+  
+  </body>

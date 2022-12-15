@@ -1,0 +1,8 @@
+<h1>Acquisti:</h1>
+<div *ngFor="let lo of lineeOrdini">
+    <h2>Acquisto:</h2>
+    <div *ngFor="let tmp of lo">  
+        {{tmp.prodotto.nome}}
+        {{tmp.qta}}
+    </div>
+</div>

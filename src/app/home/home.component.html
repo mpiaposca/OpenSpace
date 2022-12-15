@@ -1,0 +1,7 @@
+<app-barra (mostraC)="mostraCarrello($event)"></app-barra>
+<div *ngIf="!mostraC">
+    <app-store (mostraC)="addToCart($event)"></app-store>
+</div>
+<div *ngIf="mostraC">
+    <app-carrello [prodotti]="prodottiCarrello"></app-carrello>
+</div>
